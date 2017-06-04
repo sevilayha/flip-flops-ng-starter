@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'user-list',
@@ -16,10 +16,5 @@ import { Component } from '@angular/core';
   `
 })
 export class UserListComponent {
-  users = [
-    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' },
-    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' },
-    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' },
-    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' }
-  ];
+  @Input() users: any;
 }

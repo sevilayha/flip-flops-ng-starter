@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
 
     <img [src]="avatar" *ngIf="showImage">
 
-    <user-list></user-list>
+    <user-list [users]="users"></user-list>
   `,
 })
 export class AppComponent  {
@@ -23,6 +23,12 @@ export class AppComponent  {
   isSpecial   = true;
   showImage   = true;
   currentDate = new Date();
+  users = [
+    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' },
+    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' },
+    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' },
+    { name: 'chris', avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN.jpg' }
+  ];
 
   constructor() {
     setInterval(() => this.currentDate = new Date(), 1000);
